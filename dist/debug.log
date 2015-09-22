@@ -1,0 +1,24 @@
+Test 1: New a empty file in "test\".
+Forecast result: "".
+Result: "".
+
+Test 2: New a file with content in "test\".
+Forecast result: "".
+Result: "".
+
+Test 3: Get "test\newFile.txt" & print.
+Forecast result: "['Line 1', 'Line 2']".
+Result: "['Line 1', 'Line 2']".
+
+Test 4: Add a line in "test\newFile.txt" & save & print.
+Forecast result: "['Line 1', 'Line 2', 'Line 3']".
+Result: "['Line 1', 'Line 2', 'Line 3']".
+
+Test 5: Print every file in "test\".
+Forecast result: "[['test', 'newEmptyFile.txt', []], ['test', 'newFile.txt', ['Line 1', 'Line 2', 'Line 3']]]".
+Result: "[['test', 'newEmptyFile.txt', []], ['test', 'newFile.txt', ['Line 1', 'Line 2', 'Line 3']]]".
+
+Test 6: Print every thing in "test\".
+Forecast result: "[['test', 'Folder 1', [], []], ['test', 'Folder 2', [], []]]".
+Result: "[['test', 'Folder 1', [], []], ['test', 'Folder 2', [], []]]".
+
