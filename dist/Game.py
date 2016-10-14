@@ -21,7 +21,7 @@ class Game:
 	#Public function
 	def __init__(self):
 		os.system('cls')
-		os.system('title Crazy_Engine(ADV)[Beta]')
+		os.system('title Pandora_Company[Beta]')
 		self.checkSelf()
 		self.readSave()
 
@@ -60,6 +60,12 @@ class Game:
 		for each in self.cmd.content[2]:
 			self.doCMD(each)
 
+	def enterUser(self, userName):
+		self.currentUser = userName
+		self.cmd.load([self.storyPath + self.currentStory + '\\' + self.currentMap + '\\' + self.currentUser, 'userCMD.cmd'])
+		for each in self.cmd.content[2]:
+			self.doCMD(each)
+
 	def doCMD(self, line):
 		cmd = line.split(' ')
 		if cmd[0] == '':
@@ -84,10 +90,20 @@ class Game:
 					print(each)
 			else:
 				print('The file you find is not exist.')
+		elif cmd[0] == 'ssh':
+			if self.cmd.isExist([self.storyPath + self.currentStory + '\\' + self.currentMap + '\\' + self.readin[4:], 'password']):
+				self.info.load([self.storyPath + self.currentStory + '\\' + self.currentMap + '\\' + self.readin[4:], 'password'])
+				tmp = input('Password:')
+				if self.info.content[2][0] == tmp:
+					self.enterUser(self.readin[4:])
+				else:
+					print('Wrong password.')
+			else:
+				self.enterUser(self.readin[4:])
 		elif cmd[0] == 'setmap':
 			self.enterMap(cmd[1])
 		elif cmd[0] == 'setuser':
-			self.currentUser = cmd[1]
+			self.enterUser(cmd[1])
 		elif cmd[0] == 'login':
 			tmp = input('Password:')
 			if tmp == cmd[1]:

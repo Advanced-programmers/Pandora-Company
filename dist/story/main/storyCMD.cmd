@@ -1,2 +1,1 @@
-setmap 1
-setuser hyh
+setmap 0
