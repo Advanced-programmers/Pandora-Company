@@ -1,0 +1,27 @@
+{
+  "name": "pandora-company",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miswanting/Pandora-Company.git"
+  },
+  "author": "Miswanting",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/miswanting/Pandora-Company/issues"
+  },
+  "homepage": "https://github.com/miswanting/Pandora-Company#readme",
+  "devDependencies": {
+    "electron": "9.0.2",
+    "electron-builder": "latest"
+  },
+  "dependencies": {
+    "normalize.css": "latest",
+    "vue": "latest"
+  }
+}
