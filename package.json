@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/miswanting/Pandora-Company#readme",
   "devDependencies": {
-    "electron": "9.0.2",
+    "electron": "latest",
     "electron-builder": "latest"
   },
   "dependencies": {
